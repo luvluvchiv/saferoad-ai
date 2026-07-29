@@ -1,0 +1,35 @@
+{
+  "model_name": "SafeRoad AI Fatal Risk Screening Model",
+  "model_type": "CatBoost Binary Classifier",
+  "selected_version": "without_agency",
+  "target": "fatal_target",
+  "features": [
+    "province",
+    "first_vehicle",
+    "road_type",
+    "terrain_type",
+    "weather",
+    "hour",
+    "month",
+    "day_of_week",
+    "is_weekend",
+    "latitude",
+    "longitude"
+  ],
+  "categorical_features": [
+    "province",
+    "first_vehicle",
+    "road_type",
+    "terrain_type",
+    "weather"
+  ],
+  "screening_threshold": 0.4,
+  "train_period": "2019-2023",
+  "validation_period": "2024",
+  "test_period": "2025",
+  "test_roc_auc": 0.7509,
+  "test_pr_auc": 0.3311,
+  "test_fatal_precision": 0.1693,
+  "test_fatal_recall": 0.7496,
+  "test_fatal_f1": 0.2762
+}
